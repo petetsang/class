@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# file_name.py
+# Python 3.7
+"""
+Created on Mon Mar 25 13:56:24 2019
+
+@author: pedro brodude
+Modified:  Mon Mar 25 13:56:24 2019
+Description
+____________________
+
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+time = np.linspace(0, 7.0028, 101)
+A,alpha,B,beta= 166720, 1, 0, 1
+viral_load = A * np.exp(-alpha*time) + B * (np.exp(-beta*time))
+plt.plot(time,viral_load)
+data = np.loadtxt("PMLSdata/01HIVseries/HIVseries.csv", delimiter=',')
+time_in_days = data[:,0]
+concentration = data[:,1]
+plt.scatter(time_in_days, concentration)
+plt.scatter(time_in_days, viral_load)

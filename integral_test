@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# file_name.py
+# Python 3.7
+"""
+Created on Tue Apr  2 12:55:18 2019
+
+@author: pedro brodude
+Modified:  Tue Apr  2 12:55:18 2019
+Description
+____________________
+
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# quadrature.py
+
+from scipy.integrate import quad
+
+x_max = np.linspace(0, 10, 16)      # set up x-axis range
+
+def f(x): return x+x**2+x**3
+
+integral = np.zeros(x_max.size)            # initialize integral array with 0's ready to store actual quad numbers
+
+for i in range(x_max.size):
+
+      integral[i], error = quad(f, 0, x_max[i])
+
+plt.plot(x_max, integral)

@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# file_name.py
+# Python 3.7
+"""
+Created on Mon Apr 15 18:51:51 2019
+
+@author: pedro brodude
+Modified:  Mon Apr 15 18:51:51 2019
+Description
+____________________
+
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.ndimage as sim
+from mpl_toolkits.mplot3d import Axes3D
+
+
+
+#gauss = np.loadtxt("PMLSdata/16catphoto/gauss_filter.csv",delimiter=',')
+
+my_image = np.zeros((100,100))
+my_image[50,50]=10
+
+
+my_filter = np.ones( (3,3) )/9
+
+
+#response = sim.convolve(my_image, my_filter)
+
+
+response = sim.gaussian_filter(my_image, sigma=5)
+
+
+plt.figure()
+plt.imshow(my_image,cmap='gray')
+
+plt.figure()
+plt.imshow(response,cmap='gray')
+
+ax=Axes3D(plt.figure())    # create 3D plotter attached to a new figure
+
+
+x = np.arange(my_image.shape[0])
+y = np.arange(my_image.shape[1])
+X,Y = np.meshgrid(x,y, indexing='ij')
+ax.plot_surface(X, Y, response)   

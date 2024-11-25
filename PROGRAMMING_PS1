@@ -1,0 +1,30 @@
+PS 1 - Hand in write up on paper. Do not type anything! All hand written! (Due Feb 26)
+PS 1 - Hand in write up on paper. Do not type anything! All hand written! (Due Feb 26) item options
+Hide Details
+
+From Chapter 3 - Loops
+
+Your turn: 3A (homework)
+
+A) Write out what you need (in IPython console) to type to evaluate function y = e-(x^2)  over a range of values of 'x'.
+
+        i) Use for loop first.
+
+        ii) Then use vectorize notations.
+
+B) We often wish to evaluate the function   (exp[-mu])*(mu^n) /(n!) over the integer values of n=0,1,...,N.
+
+n! means n factorial. Write out the code you need in IPython console to get this in vectorized notation for N=10 and mu=2. 
+
+Do this without importing any factorial functions first.
+
+             *NOTE for part b* 
+
+             1) YOU MIGHT STILL NEED A 'FOR' LOOP BECAUSE NP.ARANGE(START,STOP,STRIDE) DOES NOT LIKE ANY ARRAYS AS    ARGUMENTS.
+
+             2) IF YOU ARE HAVING PROBLEMS DIVIDING BY 0, (IN THE 0!) , YOU CAN JUST USE n=1,....,N.
+
+
+C) Now repeat Part B) using imported factorial function from scipy.special.
+
+(you can " import scipy.special as sp" then use sp.factorial or  " from scipy.special import factorial " then use factorial ) 

@@ -1,0 +1,90 @@
+
+PS 3 - Functions (Due 4th April)
+PS 3 - Functions (Due 4th April) item options
+Hide Details
+
+1)  Load the following file into Python.
+
+ps3_0.csv Click for more options
+
+Assign the first column into the variable x
+
+assign the second column into the variable y
+
+Multiply y by 10. Assign that as y_new.
+
+Write out onto a new file, two columns: x and y_new.  
+
+[hint: 1) one option is to use:  np.stack([x, y_new], axis=1)      ]
+
+[hint: 2)  you might look through Chapter 4 on how to save data into a new file. ]
+
+
+2) Cleaning out comments:
+
+Define a function that
+
+   i) reads in a local .csv file (with # comments + numbers) in your harddrive, then   
+
+   ii) writes out a new file (with no comments, leaving only numbers )
+
+   iii) returns the two columns as one object
+
+Sample input file: ps3_1.csv Click for more options
+ 
+
+The argument for the function is the filename.
+
+Your function then outputs an entirely new file, with all comments removed, then returns the two columns as one object.
+
+
+3) Plotting function:
+
+Define a function that
+
+   i) reads in a local .csv file (such as the one outputted in above Problem 1) in your harddrive,
+
+   ii) creates a 2D plot and
+
+   iii) saves that plot into a vector graphics file. And finally the function
+
+   iv) returns the two columns array.
+
+Your function's argument is the filename.csv.  The csv file will be from a neatly cleaned up file from Problem 1. That is, assume the input file has no comments and only has neatly lined up values in two columns.
+
+The first column of the .csv file will be the horizontal values, ie x-axis. The second column of the .csv file will be the vertical values, ie y-axis.
+
+
+4) from Your Turn 6A : Define a function to compute the straight-line distance between two points in three-dimensional space. Give it a descriptive name and an informative docstring. See what happens when you call it with the wrong number or type of arguments, and ensure that using help on your function will enable a user to diagnose and resolve the issue.
+
+
+5) Plot a random walk of 500 steps in x direction and 500 steps in y direction.
+
+We can adapt coin flipping to study random walks, Brownian motion, and other interesting stochastic processes.
+
+Let's create a random walk of 500 steps. Our trajectory consists of 500 x values and 500 y values.
+
+Following good practice, start with:
+
+
+num_steps = 500
+
+
+Now create an x_array containing 500 random numbers between [0,1)  (use from numpy.random import random as rng )
+
+Now make a new array containing only elements of x_array that are less than 0.5. 
+
+You should now have an array of True and False elements.
+
+Do an algebraic operation to this array so, instead of 0's and 1',s like in class, you end up with -1 and 1's.
+
+0's and 1's stood for Heads and Tails. -1 and 1's stands for taking a step forward or backwards.
+
+Now use np.cumsum() on this array to create the final cumulative position resulting in x_position.
+
+
+Do the same for y_position.
+
+
+Write a script to make a picture of your random walk. Run it several times, print out 3 pictures that you like. Don't forget to label the plot.
+

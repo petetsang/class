@@ -1,0 +1,57 @@
+
+PS 2 - Data (Due - March 19 )
+PS 2 - Data (Due - March 19 ) item options
+Hide Details
+
+Write out on paper, how you would do the following:
+
+
+1) Plot the data from the file HIVseries.csv from class (same file from Chapter 4.1.1). Plot this file's data, clearly labeling x and y axis (including units), include Title, and add legend. Make this plot look complete.    
+
+          i) Write up your code with paper and pen (do this before you type anything on your computer!)
+
+          ii) Print out the plot.
+
+2)  Sines and Cosines:
+
+      a) Plot Sin(x) by itself for some range of x that shows at least 1 full cycle (eg x = -2*np.pi to +2*np.pi)
+
+           i) Write up your code with paper and pen first.
+
+           ii) Show your Plot print out. (no labels of any kind needed)
+
+
+      b) Plot Cos(x) by itself for some range of x that shows at least 1 full cycle (eg x = -2pi to +2pi)
+
+           i) Write up your code with paper and pen first.
+
+           ii) Show your Plot print out. (no labels of any kind needed)
+
+
+      c) Plot Sin(x) and Cos(x) simultaneously together on the same axes. Clearly labeling which is which, including title, axis labels, legends!
+
+            i) Hand write your code
+
+            ii) Print out your plot. (with Title, x and y axis labels, legend)
+
+
+3) Load data directly in your Python script from the url below. (what does url stand for again?)
+
+        https://cdiac.ess-dive.lbl.gov/ftp/trends/temp/vostok/vostok.1999.temp.dat
+
+
+      a)  Load the data into a numpy array. 
+
+           i) Display how many rows there are. 
+
+           ii) Display how many columns there are.
+
+
+      c) Make a plot with 2nd column( age of ice BP)  as x-axis  and 4th column (Temp variation deg C) as the y-axis.
+
+         Include : Title, x-axis label(with units), y-axis label (with units).  
+
+        What do you think you have plotted?
+
+
+      d) Show a print out of your plot, including Title, x and y axis-labels and  legends.
